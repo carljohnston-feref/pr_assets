@@ -1,0 +1,249 @@
+// Fonts
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
+
+// Common Tag Styling
+* {
+	box-sizing: border-box;
+}
+
+pre {
+	white-space: inherit;
+	border: 1px solid $borderColour;
+	border-radius: 5px;
+	padding: 5px 10px;
+	margin-top: 5px;
+	background: $preBackground;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: $fontSize;
+	font-weight: 400;
+	color: $fontColour;
+	line-height: $lineHeight;
+	word-spacing: 2px;
+}
+
+a {
+	display: inline-block;
+	color: inherit;
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		color: $linkHover;
+	}
+
+	&:visited {
+		color: inherit;
+	}
+}
+
+h2 {
+	font-size: $h1FontSize;
+	margin-bottom: 25px;
+}
+
+.container {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.item {
+	padding: 15px 0px;
+
+	&:first-of-type {
+		padding-top: 0;
+	}
+
+	&:last-of-type {
+		padding-bottom: 0;
+	}
+}
+
+.right,
+.left,
+.full-width {
+	margin-top: 50px;
+}
+
+// Header
+header {
+	position: fixed;
+	height: 65px;
+	width: 100%;
+	top: 0;
+	color:$headerFontColour;
+	background-color: $headerBackground;
+	z-index: 99;
+
+	.logo {
+		position: absolute;
+		max-width: 75px;
+		height: auto;
+		top: 14px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+// Artwork
+.header {
+	height: 33vh;
+	max-height: 350px;
+	margin-top: 65px;
+	text-align: center;
+	background-size: cover;
+	background-position: bottom center;
+	background-attachment: fixed;
+
+	.header-gradient {
+		height: 100%;
+		background: rgba(0, 0, 0, 0.2);
+
+		h1 {
+			position: relative;
+			font-family: Georgia,serif;
+			font-style: italic;
+			font-weight: 100;
+			top: 50%;
+			color: #fff;
+			font-size: 50px;
+			transform: translateY(-50%);
+			text-shadow: 2px 2px 0 rgba(0,0,0,.5);
+			padding: 0 15px;
+			line-height: 45px;
+		}
+	}
+}
+
+// Title Treatment
+.titleTreatment {
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// Contact
+.contact {
+
+	.contactContainer {
+		margin-bottom: 15px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	h3 {
+		color: $contactNameColour;
+	}
+
+	.title {
+		font-size: $jobTitleFontSize;
+		font-weight: $jobTitleFontWeight;
+		margin-top: -6px;
+	}
+
+	.email,
+	.phone {
+		line-height: $contactLineHeight;
+
+		p,
+		a {
+			display: inline-block;
+			font-size: $contactFontSize;
+		}
+
+		p:first-of-type {
+			width: 50px;
+			font-weight: 700;
+		}
+	}
+}
+
+// Assets
+.assets {
+
+	table {
+		width: 100%;
+		text-align: center;
+
+		tbody {
+
+			tr {
+				transition: .15s linear;
+				-o-transition: .15s linear;
+				-ms-transition: .15s linear;
+				-moz-transition: .15s linear;
+				-webkit-transition: .15s linear;
+
+				&:hover {
+					background: $tableHover;
+				}
+			}
+		}
+
+		tr {
+
+			th {
+				color: $thColour;
+			}
+
+			th,
+			td {
+
+				&:nth-child(1) {
+					text-align: left;
+				}
+
+				&:nth-child(2) {
+					width: 150px;
+				}
+
+				&:nth-child(3) {
+					width: 100px;
+				}
+
+				&:nth-child(4) {
+					width: 100px;
+				}
+			}
+		}
+	}
+}
+
+// Footer
+footer {
+	width: 100%;
+	padding: 15px;
+	font-family: Georgia,Times,'Times New Roman',serif;
+	font-style: italic;
+	font-size: $footerFontSize;
+	text-align: center;
+	line-height: initial;
+	word-spacing: initial;
+	background-color: $footerBackground;
+}
+
+// Useful Classes
+.border {
+	padding: 25px;
+	border: 1px solid $borderColour;
+	border-radius: 5px;
+}
+
+.row {
+	margin: 15px 0px;
+}
+
+.clearfix {
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
